@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cloudflare Turnstile Demo</title>
 
-  <!-- Load the Turnstile API -->
+  <!-- Load Turnstile API -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
   <style>
@@ -34,6 +34,7 @@
 <body>
   <h1>Cloudflare Turnstile Demo</h1>
 
+  <!-- Form: no backend yet, just displays Turnstile -->
   <form method="POST">
     <label>
       Name:<br />
@@ -41,7 +42,7 @@
     </label>
     <br><br>
 
-    <!-- Turnstile Widget -->
+    <!-- Turnstile widget -->
     <div class="cf-turnstile" data-sitekey="0x4AAAAAAB_f_t4FxK3wHb8R"></div>
 
     <br>
@@ -49,7 +50,8 @@
   </form>
 
   <p style="margin-top:2em;color:#555;">
-    Replace <code>YOUR_SITE_KEY</code> with your Turnstile site key, and update the form action URL.
+    Replace <code>YOUR_SITE_KEY_HERE</code> with your Turnstile site key.  
+    This form does not submit anywhere yet; it’s just a demo for Turnstile.
   </p>
 </body>
 </html>
