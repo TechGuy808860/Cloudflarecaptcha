@@ -1,57 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cloudflare Turnstile Demo</title>
+<!-- Cloudflare Turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-  <!-- Load Turnstile API -->
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<form action="/your-form-handler" method="POST">
+  <div class="cf-turnstile"
+       data-sitekey="0x4AAAAAAB_f_t4FxK3wHb8R"
+       data-theme="auto">
+  </div>
+  <input type="submit" value="Submit">
+</form>
 
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      text-align: center;
-      margin: 2em;
-    }
-    form {
-      display: inline-block;
-      text-align: left;
-      padding: 1.5em;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
-    button {
-      background: #0078ff;
-      color: white;
-      border: none;
-      padding: 0.5em 1em;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <h1>Cloudflare Turnstile Demo</h1>
-
-  <!-- Form: no backend yet, just displays Turnstile -->
-  <form method="POST">
-    <label>
-      Name:<br />
-      <input type="text" name="name" required>
-    </label>
-    <br><br>
-
-    <!-- Turnstile widget -->
-    <div class="cf-turnstile" data-sitekey="0x4AAAAAAB_f_t4FxK3wHb8R"></div>
-
-    <br>
-    <button type="submit">Submit</button>
-  </form>
-
-  <p style="margin-top:2em;color:#555;">
-    Replace <code>YOUR_SITE_KEY_HERE</code> with your Turnstile site key.  
-    This form does not submit anywhere yet; it’s just a demo for Turnstile.
-  </p>
-</body>
-</html>
